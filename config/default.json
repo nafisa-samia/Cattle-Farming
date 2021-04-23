@@ -1,0 +1,4 @@
+{
+    "mongoURI": "mongodb+srv://samia:samia123@cattlefarming.y7kf2.mongodb.net/test?retryWrites=true&w=majority",
+    "jwtSecret": "mysecrettoken"
+}
