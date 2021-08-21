@@ -26,9 +26,6 @@ const ProfileSchema = mongoose.Schema({
     bio: {
         type: String
     },
-    githubusername: {
-        type: String
-    },
     experience: [{
         title: {
             type: String,
@@ -57,44 +54,92 @@ const ProfileSchema = mongoose.Schema({
         }
     }],
     education: [
-    {
-        school: {
-            type: String,
-            required: true
-        },
-        degree: {
-            type: String,
-            required: true
-        },
-        fieldofstudy: {
-            type: String,
-            required: true
-        },
-        from: {
-            type: Date,
-            required: true
-        },
-        to: {
-            type: Date
-        },
-        current: {
-            type: Boolean,
-            default: false
-        },
-        description: {
-            type: String
-        }
-    }],
+        {
+            school: {
+                type: String,
+                required: true
+            },
+            degree: {
+                type: String,
+                required: true
+            },
+            fieldofstudy: {
+                type: String,
+                required: true
+            },
+            from: {
+                type: Date,
+                required: true
+            },
+            to: {
+                type: Date
+            },
+            current: {
+                type: Boolean,
+                default: false
+            },
+            description: {
+                type: String
+            }
+        }],
+    cow: [
+        {
+            cow_id: {
+                type: String,
+                required: true
+            },
+            from: {
+                type: Date,
+                required: true
+            },
+            to: {
+                type: Date
+            },
+            current: {
+                type: Boolean,
+                default: false
+            },
+            weight: {
+                type: String
+            },
+            color: {
+                type: String
+            },
+            pregnancy: {
+                type: String
+            },
+            grass: {
+                type: String
+            },
+            solid: {
+                type: String
+            },
+            milking: {
+                type: String
+            },
+            blood_pressure: {
+                type: String
+            },
+            temparature: {
+                type: String
+            },
+            feed_cost: {
+                type: String
+            },
+            description: {
+                type: String
+            }
+        }],
     social: {
         youtube: {
-          type: String
+            type: String
         },
         twitter: {
             type: String
-            },
+        },
         facebook: {
             type: String
-            },
+        },
         linkedin: {
             type: String
         },

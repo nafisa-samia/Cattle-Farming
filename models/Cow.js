@@ -7,50 +7,59 @@ const CowSchema = new Schema({
         type: Schema.Types.ObjectId,
         ref: "users"
     },
-    name: {
+    farmer_name: {
         type: String
+    },
+    text: {
+        type: String,
+        required: true
     },
     avatar: {
         type: String
     },
     cow_id: {
         type: String,
-        required: true
+        // required: true
     },
-    type: {
-        type: String
-    },
-    selling_price: {
+    origin: {
         type: String
     },
     purchase_date: {
         type: Date
     },
-    current: {
-        type: Boolean,
-        default: false
+    selling_price: {
+        type: String,
+        // required: true
     },
     weight: {
         type: String
     },
-    color: {
-        type: String
+    cow_image: {
+        type: String,
+        // required: true
     },
-    temparature: {
-        type: String
-    },
-    humidity: {
-        type: String
-    },
-    grass: {
-        type: String
-    },
-    solid: {
-        type: String
-    },
-    milking: {
-        type: String
-    },
+    comments: [
+        {
+            user: {
+                type: Schema.Types.ObjectId,
+                ref: 'users'
+            },
+            text: {
+                type: String,
+                required: true
+            },
+            name: {
+                type: String
+            },
+            avatar: {
+                type: String
+            },
+            date: {
+                type: Date,
+                default: Date.now
+            }
+        }
+    ],
     date: {
         type: Date,
         default: Date.now
